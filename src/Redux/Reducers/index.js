@@ -13,7 +13,7 @@ export default combineReducers({
   notificationOperations: notificationOperations,
   createPostOperations: createPostOperations,
   createCommenttOperations: createCommenttOperations,
-  getCommentOperations: getCommentReducer,
+  getCommentOperations: getCommentOperations,
   developmentUsersReducer: developmentUsersReducer
 
 })
