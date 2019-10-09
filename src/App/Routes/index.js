@@ -6,6 +6,7 @@ import { NotificationContainer, NotificationManager } from "react-notifications"
 import { hideNotification } from "../../Redux/Actions/NotificationActions"
 import "react-notifications/lib/notifications.css"
 import './Style/index.css'
+import posts from '../../Pages/Posts'
 
 class Routes extends React.Component {
 
@@ -37,6 +38,7 @@ class Routes extends React.Component {
       return (
         <div className="app-container">
           <Switch>
+          <Route path="/" component={Posts} />
 
 
 
