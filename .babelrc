@@ -1,0 +1,3 @@
+{
+  "presets": ["react" , "modern-browsers", "stage-0"]
+}

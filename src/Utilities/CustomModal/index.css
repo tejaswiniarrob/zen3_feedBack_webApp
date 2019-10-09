@@ -1,0 +1,110 @@
+.modal-content {
+    position: relative;
+    background-color: var(--light);
+    background-clip: padding-box;
+    height: 60%;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px !important;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    overflow-y:auto;
+    width:135%;
+}
+.ModalContainer{
+  width: 100%;
+  /* height: 20%; */
+}
+.modal-header{
+  display: -ms-flexbox;
+  text-align: center;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  /* -ms-flex-pack: justify; */
+  justify-content: center;
+  border-bottom: 0px solid #e9ecef;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 0px;
+}
+.modal_heder_hide{
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  background: var(--buttonColor);
+  border-radius: 20px;
+  position: fixed;
+  border: 0px;
+  box-shadow: 0 2px 8px #ccc5b9;
+  float: right;
+  margin-left: 130%;
+  margin-top: -2%;
+  color: var(--buttonBgColor);
+  cursor: pointer;
+}
+.modal_heder_hide .fa{
+font-size: 16px;
+font-weight: lighter;
+}
+@media (min-width: 768px){
+  .modal-content {
+    /* height: 220%;
+    overflow-y: auto; */
+      position: relative;
+      background-color: var(--buttonColor);
+      background-clip: padding-box;
+      border: 1px solid #999;
+      border: 1px solid rgba(0,0,0,.2);
+      border-radius: 6px !important;
+      outline: 0;
+      -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+      box-shadow: 0 3px 9px rgba(0,0,0,.5);
+  }
+.modal-title{
+  font-size: var(--modelHeader);
+  margin-top: 5px;
+  color: var(--headerColor);
+}
+  .modal-header{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    /* justify-content: space-between; */
+    border-bottom: 0px solid #e9ecef;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+}
+@media (max-width: 933px){
+.modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+   }
+}
+@media (min-width: 0px) and (max-width: 932px){
+  .modal-content{
+    width: auto;
+  }
+  .modal-dialog{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 31%;
+    padding-bottom: 31%;
+    margin: 0px;
+    width: auto;
+    max-width: 100%;
+  }
+  .modal_heder_hide{
+    /* margin-left: 77%; */
+    display: none;
+  }
+}
+@media (min-width: 576px){
+  .modal-dialog {
+    max-width: 400px;
+    margin: 1.75rem auto;
+  }
+}
