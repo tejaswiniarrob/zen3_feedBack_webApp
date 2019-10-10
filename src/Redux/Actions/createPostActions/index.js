@@ -28,7 +28,7 @@ export const createPost = (postData) => {
     try {
 
         let payload = {
-          TF_POST_DESCRIPTION: postData.postDescription,
+          TF_POST_DESCRIPTION: postData.TF_POST_DESCRIPTION,
           TF_CREATED_BY: localStorage.getItem("user_id"),
           TF_EMAIL: localStorage.getItem("emails"),
           TF_FIRST_NAME: localStorage.getItem("first_name"),

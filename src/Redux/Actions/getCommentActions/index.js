@@ -28,10 +28,14 @@ export const getComment = (commentData) => {
     try {
 
 
-        let {data} = await axios.get(`${REACT_APP_FEEDBACK_API}/v1/zen3/api/feedback/read`)
+        let commentData = await axios.get(`${REACT_APP_FEEDBACK_API}/v1/zen3/api/feedback/read`).then((data)=>{
 
-        dispatch(GetCommentSuccess( data.data))
-        dispatch(showNotification('success',data.data.message))
+          dispatch(GetCommentSuccess( data.data.data))
+        }).catch((e)=>{
+          throw(e)
+        })
+
+        // dispatch(showNotification('success',data.data.message))
 
 
 

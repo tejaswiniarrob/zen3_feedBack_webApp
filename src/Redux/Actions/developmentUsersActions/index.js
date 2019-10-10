@@ -32,7 +32,7 @@ export const developmentUsers = (developmentData) => {
         let {data} = await axios.get(`${REACT_APP_FEEDBACK_API}/v1/zen3/api/users/developmentusers/read`)
 
         dispatch(DevelopmentUsersSuccess( data.data))
-        dispatch(showNotification('success',data.data.message))
+        // dispatch(showNotification('success',data.data.message))
 
 
 
