@@ -28,11 +28,16 @@ export const createPost = (postData) => {
     try {
 
         let payload = {
-          TF_POST_DESCRIPTION: postData.postDescription
+          TF_POST_DESCRIPTION: postData.postDescription,
+          TF_CREATED_BY: localStorage.getItem("user_id"),
+          TF_EMAIL: localStorage.getItem("emails"),
+          TF_FIRST_NAME: localStorage.getItem("first_name"),
+          TF_LAST_NAME: localStorage.getItem("last_name"),
+          TF_PROFILE_PIC: localStorage.getItem("profile_pic")
         }
 
         let {data} = await axios.post(`${REACT_APP_FEEDBACK_API}/v1/zen3/api/feedback/post`, payload)
-        
+
         dispatch(CreatePostSuccess( data.data))
         dispatch(showNotification('success',data.data.message))
 

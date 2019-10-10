@@ -28,7 +28,13 @@ export const createComment = (commentData) => {
     try {
 
         let payload = {
-          TF_COMMENT_DESCRIPTION: commentData.commentDescription
+          TF_COMMENT_DESCRIPTION: commentData.commentDescription,
+          TF_POST_ID: commentData.TF_POST_ID,
+          TF_CREATED_BY: localStorage.getItem("user_id"),
+          TF_EMAIL: localStorage.getItem("emails"),
+          TF_FIRST_NAME: localStorage.getItem("first_name"),
+          TF_LAST_NAME: localStorage.getItem("last_name"),
+          TF_PROFILE_PIC: localStorage.getItem("profile_pic")
         }
 
         let {data} = await axios.post(`${REACT_APP_FEEDBACK_API}/v1/zen3/api/feedback/comment`, payload)

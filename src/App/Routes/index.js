@@ -38,7 +38,7 @@ class Routes extends React.Component {
       return (
         <div className="app-container">
           <Switch>
-          <Route path="/" component={Posts} />
+          <Route path="/" component={posts} />
 
 
 
